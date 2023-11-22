@@ -1,0 +1,161 @@
+/* Assuming you've imported a font from Google Fonts in your HTML */
+body {
+    font-family: 'Open Sans', sans-serif; /* This is an example; choose a font that matches the mockup */
+    color: #ffffff;
+    background-color: #123522; /* Use the exact color from the mockup */
+}
+
+header {
+    background-color: #1A472A; /* Use the exact color from the mockup */
+    padding: 1em 2em; /* Adjust to match the mockup's padding */
+}
+
+/* Navigation bar styles */
+.navbar .logo img {
+    height: 50px; /* Set the height to match the size you want */
+    width: auto; /* Set the width to auto to maintain aspect ratio */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1em; /* Adjust spacing to match the mockup */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff; /* Adjust if the mockup has different hover colors */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #AED581; /* Hover color */
+}
+
+/* Hero section styles */
+.hero {
+    /* ... (existing hero styles) ... */
+    background-image: url('welcome-background.png'); /* Ensure the file is correct */
+    display: flex;
+    justify-content: space-between; /* Aligns children (text and blurb boxes) side by side */
+    align-items: center; /* Vertically centers the children */
+    padding: 4em; /* Adjust to match the mockup's spacing */
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensures the content spans the full width */
+}
+
+.hero-text-box {
+    flex-basis: 50%; /* Adjusts the width to half of the hero content */
+    padding: 2em;
+    background-color: #2E6344; /* Solid color background */
+    color: #ffffff; 
+    border-radius: 10px;
+    /* Optionally, set a border for additional visual separation */
+    border: 2px solid #AED581;
+}
+
+.hero-blurb-box {
+    flex-basis: 40%; /* Adjusts the width as needed */
+    padding: 2em;
+    background-color: #2E6344; /* Solid color background */
+    color: #ffffff; 
+    border-radius: 10px;
+    /* Optionally, set a border for additional visual separation */
+    border: 2px solid #AED581;
+}
+
+.services .grid-container {
+    display: grid;
+    /* Use 1fr for equal-width columns, adjust the number of columns to fit your content */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem; /* Adjust gap size to provide space between cards */
+    padding: 2rem; /* Add padding to the container */
+    max-width: 1200px; /* Set a max-width to constrain the card container size */
+    margin: 0 auto; /* Center the grid container */
+}
+
+.card {
+    background-color: #2E6344; /* Adjust card background color */
+    color: white;
+    padding: 1rem; /* Adjust padding inside cards */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 50px; /* Adjust icon size */
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.25rem; /* Adjust font size for the title */
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem; /* Adjust font size for the description */
+    margin-bottom: 1rem;
+    word-break: keep-all;
+}
+
+.card button {
+    /* Adjust button styling as necessary */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services .grid-container {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .services {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+    .hero {
+        flex-direction: column; /* Stack text and blurb boxes on small screens */
+        padding: 2em; /* Less padding on smaller screens */
+    }
+
+    .hero-text-box,
+    .hero-blurb-box {
+        flex-basis: auto; /* Allow boxes to size according to content */
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #1A472A; /* Match the header background color */
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
